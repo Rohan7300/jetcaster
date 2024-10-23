@@ -21,7 +21,10 @@ jobs:
        run: chmod +x ./gradlew
 
      - name: Clean
-       run:  ./gradlew clean
+       run: ./gradlew clean
+
+     - name: Build with Gradle
+       run: ./gradlew assembleRelease
 
      - name: Build APK
        uses: actions/upload-artifact@v4
