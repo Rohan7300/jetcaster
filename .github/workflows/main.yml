@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
  
     steps: 
-     - name: Checkout vode
+     - name: Checkout code
        uses: actions/checkout@v2
 
      - name: Set Up JDK
@@ -16,6 +16,9 @@ jobs:
        with:
          java-version: '17'
          distribution: 'temurin'
+
+     - name: Permission
+       run: chmod +x ./gradlew
 
      - name: Clean
        run:  ./gradlew clean
